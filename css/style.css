@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue-Regular.ttf');
+}
+
+html {
+    position: relative;
+}
+
+body {
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+
+.jumbotron {
+    height: 400px;
+    background-image: url('../img/header-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -50px;
+    color: #eaeaea;
+    overflow: hidden;
+}
+
+
+
+.jumbotron h1,
+.jumbotron p {
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, .5);
+}
+
+.jumbotron img {
+    width: 200px;
+    border: 5px solid #eaeaea;
+}
+
+.jumbotron img.muncul {
+    overflow: visible;
+    position: 9999;
+}
+
+.portfolio span {
+    font-family: 'Bebas Neue';
+    font-size: 50px;
+    opacity: 0;
+    color: #333;
+    display: block;
+    width: 405px;
+    height: 235px;
+    text-align: center;
+    line-height: 235px;
+    background-color: rgba(184, 184, 184, 0.5);
+    position: absolute;
+    top: 0;
+    transform: scale(0) rotate(0);
+    transition: .3s;
+}
+
+.portfolio .thumbnail:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+hr {
+    width: 250px;
+    border-top: 2px solid #818181;
+}
+
+section {
+    min-height: 100px;
+
+}
+
+.portfolio {
+    background-color: rgb(199, 199, 199);
+}
+
+.portfolio .thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.portfolio .thumbnail.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+
+}
+
+.pkiri {
+    transform: translate(-50px, 0);
+    transform: rotate(15deg);
+
+}
+
+.pkanan {
+    transform: translate(50px, 0);
+    transform: rotate(-15deg);
+
+}
+
+.pkanan,
+.pkiri {
+    opacity: 0;
+    transition: 1s;
+}
+
+.pkanan.pmuncul,
+.pkiri.pmuncul {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.contact img {
+    margin-left: 10px;
+    width: 100px;
+}
+
+.contact .container .kontak {
+    margin-left: 400px;
+    float: left;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: #999;
+    padding: 30px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 1em;
+}
